@@ -1,0 +1,1 @@
+Käyttäjä pystyy kirjautumaan sovellukseen ja luomaan tehtäviä rappu ja asukas kohtaisesti. Tehtävät pystytään merkitsemään tehdyiksi. Piha ja rappu kohtaisesti pystyy myös laittamaan erillaisia tapahtumia, kuten pihajuhlia tai asukkaiden järjestämiä juhlia.
