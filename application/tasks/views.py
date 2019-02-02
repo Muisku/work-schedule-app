@@ -3,6 +3,7 @@ from flask import redirect, render_template, request, url_for
 from application.tasks.models import Task
 from application.tasks.forms import TaskForm
 
+
 @app.route("/tasks", methods=["GET"])
 def tasks_index():
 	return render_template("tasks/list.html", tasks = Task.query.all())

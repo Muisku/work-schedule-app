@@ -5,9 +5,18 @@
     <title>TodoApp</title>	 
  </head>
   <body>
+    {% if current_user.is_authenticated %}
+      <p>
+	Kirjautunut nimellä {{ current_user.name }}
+      </p>
+      {% else %}
+      <a href="{{ url_for('auth_login') }}">Kirjaudu</a>
+      {% endif %}
+      
     <ul>
        <li><a href="{{ url_for('tasks_index') }}">List tasks</a></li>
        <li><a href="{{ url_for('tasks_form') }}">Add a task</a></li>
+       <li><a href="{{ url_for('auth_login') }}">Login</a></li>
   {% block body %}
   <p>
   Content.
