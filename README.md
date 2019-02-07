@@ -4,4 +4,4 @@ Tietokantakaavio hahmotelma: https://github.com/Muisku/work-schedule-app/blob/ma
 
 Käyttötapauksia: https://github.com/Muisku/work-schedule-app/blob/master/documentation/kayttotapauksia.md
 
-Sovelluksen kehitystä voi seurata täältä: https://work-schedule-orange.herokuapp.com/
+Sovelluksen kehitystä voi seurata täältä: https://orange-schedule-app.herokuapp.com/
