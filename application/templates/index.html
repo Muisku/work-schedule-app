@@ -3,5 +3,22 @@
 {% block body %}
 <p>
     Hello World! from index.html
+    Tadaa!
 </p>
+
+{% if needs_tasks is defined %}
+<p>
+    Nämä naapurit ovat vailla tehtäviä:
+</p>
+
+<ul>
+    {% for user in needs_tasks %}
+    <li>
+        {{user.id}} {{user.name}}
+    </li>
+    {% endfor %}
+</ul>
+
+{% endif %}
+
 {% endblock %}
