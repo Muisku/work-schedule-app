@@ -9,3 +9,11 @@ class LoginForm(FlaskForm):
     class Meta:
         csrf = False
 
+class RegisterForm(FlaskForm):
+    name = StringField("Nimimerkki:")
+    username = StringField("Käyttäjätunnus:")
+    password = PasswordField("Salasana:")
+    confirm = PasswordField("Vahvista Salasana:")
+
+    class Meta:
+        csrf = False
