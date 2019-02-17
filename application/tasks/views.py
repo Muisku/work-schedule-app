@@ -9,6 +9,7 @@ from application.tasks.forms import TaskForm
 @app.route("/tasks", methods=["GET"])
 def tasks_index():
 	return render_template("tasks/list.html", tasks = Task.query.all())
+	
 
 @app.route("/tasks/new/")
 @login_required

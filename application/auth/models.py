@@ -46,4 +46,19 @@ class User(db.Model):
         for row in res:
             response.append({"id":row[0], "name":row[1]})
 
-        return response    
+        return response
+
+    @staticmethod
+    def find_users():
+        stmt = text("SELECT Account.id, Account.name FROM Account"
+                    " LEFT JOIN Task ON Task.account_id = Account.id")
+        res = db.engine.execute(stmt)
+
+        response = []
+        for row in res:
+            response.append({"task":row[0], "name":row[1]})
+
+        return response   
+
+
+  
