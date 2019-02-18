@@ -34,12 +34,12 @@ def auth_register():
         return render_template("auth/registerform.html", form = RegisterForm())
 
     form = RegisterForm(request.form)
-    
+
     if User.query.filter_by(username=form.username.data).first():
         return render_template("auth/registerform.html", form=form,
                                 error = "Käyttäjätunnus on jo olemassa")
 
-    user = User(form.name.data,form.username.data,form.password.data)
+    user = User(form.name.data,form.username.data,form.letter.data,form.password.data)
     db.session().add(user)
     db.session().commit()
 

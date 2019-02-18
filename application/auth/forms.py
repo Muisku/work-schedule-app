@@ -12,6 +12,7 @@ class LoginForm(FlaskForm):
 class RegisterForm(FlaskForm):
     name = StringField("Nimimerkki:")
     username = StringField("Käyttäjätunnus:")
+    letter = StringField("Rappu:")
     password = PasswordField("Salasana:")
     confirm = PasswordField("Vahvista Salasana:")
 

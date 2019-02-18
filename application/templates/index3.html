@@ -3,16 +3,15 @@
 {% block body %}
 
     <ul>
-            {% for user in all_users %}
+            {% for user in users_tasks %}
             <li>
-
-                {{user.id}}
-                {{user.name}}
-                {{user.letter}}
+                
+                {{user.name}} {{user.task_name}} {{user.done}}
+             
             </li>
             {% endfor %}
         </ul>
-    
+        
 
 
 {% endblock %}

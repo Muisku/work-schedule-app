@@ -1,4 +1,5 @@
 from application import db
+from sqlalchemy.sql import text
 
 class Task(db.Model):
 	id = db.Column(db.Integer, primary_key=True)
@@ -14,3 +15,5 @@ class Task(db.Model):
 	def __init__(self, name):
 		self.name = name
 		self.done = False
+
+	

@@ -5,6 +5,8 @@ from flask_login import login_required, current_user
 from application.tasks.models import Task
 from application.tasks.forms import TaskForm
 
+from sqlalchemy.sql import text
+
 
 @app.route("/tasks", methods=["GET"])
 def tasks_index():
