@@ -14,7 +14,7 @@ class RegisterForm(FlaskForm):
     username = StringField("Käyttäjätunnus:")
     letter = StringField("Rappu:")
     password = PasswordField("Salasana:")
-    confirm = PasswordField("Vahvista Salasana:")
+    
 
     class Meta:
         csrf = False
