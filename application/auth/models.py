@@ -16,9 +16,8 @@ class User(db.Model):
     password = db.Column(db.String(144), nullable=False)
 
     tasks = db.relationship("Task", backref='account', lazy=True)
-    stair = db.relationship("Stair", backref='account', lazy=True)
-
     
+    stairs = db.relationship("Stair", backref='account', lazy=True)
 
     def __init__(self, name, username, letter, password):
         self.name = name
@@ -78,27 +77,6 @@ class User(db.Model):
         return response       
 
 
-
-
-
-
-
-
-
-
-    """ @staticmethod
-	def find_users_tasks():
-		stmt = text("SELECT account.name, task.name, task.done FROM Account, Task"
-					" WHERE Account.id = Task.account_id")
-		res = db.engine.execute(stmt)
-
-		response = []
-		for row in res:
-			response.append({"name":row[0], "task_name":row[1], "done":row[2]})
-
-		return response
-         """
-    
 		
      
 

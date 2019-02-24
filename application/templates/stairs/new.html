@@ -1,0 +1,17 @@
+{% extends "layout.html" %}
+
+  {% block body %}
+  <form method="POST" action="{{ url_for('stairs_create') }}">
+    <table>
+      <tr>
+	<td>
+	  {{ form.stair_letter.label }}
+	</td>
+	
+    
+	<td colspan="3">
+	  <input type="submit" value="Add Stair"/>
+	</td>
+      </tr>
+  </form>
+  {% endblock %}
