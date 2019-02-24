@@ -23,6 +23,7 @@ from application.auth import models
 from application.auth import views
 
 from application.stair import models
+from application.stair import views
 
 from application.auth.models import User
 from os import urandom

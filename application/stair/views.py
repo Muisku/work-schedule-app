@@ -15,9 +15,8 @@ def stairs_form():
 
 
 @app.route("/stairs/", methods=["POST"])
-@login_required
 def stairs_create():
-	form = StairsForm(request.form)
+	form = StairForm(request.form)
 
 	if not form.validate():
 		return render_template("tasks/new.html", form = form)

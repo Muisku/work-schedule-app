@@ -12,6 +12,7 @@
 	{{ form.username }}
       </td>
     </tr>
+
     <tr>
       <td>
 	{{ form.password.label }}
@@ -26,6 +27,7 @@
       </td>
     </tr>
 </form>
-<p><a href="{{ url_for('auth_register') }}">Luo uusi käyttäjätunnus?</a></p>
+<p><a href="{{ url_for('auth_register') }}">Luo uusi käyttäjätunnus</a></p>
+<p><a href="{{ url_for('stairs_form') }}">Anna rapun kirjain</a></p>
 
 {% endblock %}

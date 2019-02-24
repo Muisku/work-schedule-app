@@ -4,9 +4,14 @@
   <form method="POST" action="{{ url_for('stairs_create') }}">
     <table>
       <tr>
-	<td>
-	  {{ form.stair_letter.label }}
-	</td>
+          <tr>
+              <td>
+          {{ form.stair_letter.label }}
+              </td>
+              <td>
+          {{ form.stair_letter }}
+              </td>
+            </tr>
 	
     
 	<td colspan="3">

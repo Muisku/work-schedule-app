@@ -12,6 +12,11 @@ class Stair(db.Model):
     account_id = db.Column(db.Integer, db.ForeignKey('account.id'),
     nullable=False)
 
+
     def __init__(self, stair_letter):
         self.stair_letter = stair_letter
+
+    @staticmethod
+    def find_all():
+        stmt = text("SELECT stair.stair_letter FROM")
 

@@ -35,10 +35,10 @@ def auth_register():
 
     form = RegisterForm(request.form)
 
-    user = User(form.name.data,form.username.data,form.letter.data,form.password.data)
+    user = User(form.name.data,form.username.data,form.password.data)
     db.session().add(user)
     db.session().commit()
 
     login_user(User.query.filter_by(username=form.username.data, password=form.password.data).first())
 
-    return redirect(url_for("index"))
+    return redirect(url_for("auth_login"))

@@ -1,0 +1,19 @@
+{% extends "layout.html" %}
+
+{% block body %}
+
+    <ul>
+        
+            {% for user in tasks_stairs %}
+            <li>
+                
+                {{user.stair}}
+                {{user.name}}
+                
+            </li>
+            {% endfor %}
+        </ul>
+    
+
+
+{% endblock %}
