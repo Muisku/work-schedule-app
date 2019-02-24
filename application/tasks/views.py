@@ -19,14 +19,24 @@ def tasks_form():
 	return render_template("tasks/new.html", form = TaskForm())
 
 @app.route("/tasks/<task_id>/", methods=["POST"])
-@login_required
+
 def task_set_done(task_id):
 
 	t = Task.query.get(task_id)
 	t.done = True
 	db.session().commit()
 
+
 	return redirect(url_for("tasks_index"))
+
+@app.route("/tasks/<id_a>/rm", methods=["POST"])
+def task_remove(id_a):
+
+	c = Task.query.get(id_a)
+	db.session().delete(c)
+	db.session().commit()
+
+	return redirect(url_for("tasks_index"))	
 
 
 @app.route("/tasks/", methods=["POST"])
