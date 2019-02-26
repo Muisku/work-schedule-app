@@ -1,6 +1,6 @@
 from application import app, db
 from flask import redirect, render_template, request, url_for
-from flask_login import current_user
+from flask_login import login_required, current_user
 
 from application.stair.models import Stair
 from application.stair.forms import StairForm
@@ -9,12 +9,14 @@ from sqlalchemy.sql import text
 
 
 @app.route("/stairs/new/")
+@login_required
 def stairs_form():
 	return render_template("stairs/new.html", form = StairForm())
 
 
 
 @app.route("/stairs/", methods=["POST"])
+@login_required
 def stairs_create():
 	form = StairForm(request.form)
 
