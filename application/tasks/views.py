@@ -62,5 +62,20 @@ def task_remove(id_a):
 	db.session().delete(c)
 	db.session().commit()
 
-	return redirect(url_for("tasks_index"))	
+	return redirect(url_for("tasks_index"))
+
+@app.route("/tasks/<id_g>/edit", methods = ["GET"])
+def edit_task(id_g):
+	form = TaskForm(request.form)
+	form.name.data = Task.query.get(id_g).name
+	return render_template("tasks/edit.html", task = Task.query.get(id_g), form = form)
+
+@app.route("/tasks/<id_g>/update", methods = ["POST"])
+def update_task(id_g):
+	form = TaskForm(request.form)
+	task = Task.query.get(id_g)
+	task.name = form.name.data
+	db.session().commit()
+	
+	return redirect(url_for('tasks_index'))
 

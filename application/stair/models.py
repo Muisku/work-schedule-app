@@ -10,7 +10,7 @@ class Stair(db.Model):
     stair_letter = db.Column(db.String(144), nullable=False)
 
     account_id = db.Column(db.Integer, db.ForeignKey('account.id'),
-    nullable=False)
+    nullable=True)
 
 
     def __init__(self, stair_letter):

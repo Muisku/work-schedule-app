@@ -1,0 +1,19 @@
+{% extends "layout.html" %}
+
+{% block body %}
+
+<form method="POST" action="{{ url_for('update_task', id_g=task.id) }}">
+    
+    
+    <div class="form-group" style="width:173px">
+        <p>Tehtävän nimi:</p>
+        <input type="text" class="form-control" id="name" name="name" value="{{task.name}}">
+    </div>
+
+    <div>
+        <button type="submit" class="btn btn-outline-primary">Päivitä</button>
+    </div>
+                    
+</form>
+
+{% endblock %}

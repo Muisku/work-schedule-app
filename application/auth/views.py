@@ -21,7 +21,7 @@ def auth_login():
 
 
     login_user(user)
-    return redirect(url_for("index"))    
+    return redirect(url_for("tasks_form"))    
    
 @app.route("/auth/logout")
 def auth_logout():
@@ -42,3 +42,16 @@ def auth_register():
     login_user(User.query.filter_by(username=form.username.data, password=form.password.data).first())
 
     return redirect(url_for("auth_login"))
+
+@app.route("/users", methods=["GET"])
+def users_index():
+    return render_template("index2.html", users = User.query.all())    
+
+@app.route("/users/<id_b>/remove/", methods = ["POST"])
+def user_remove(id_b):
+
+     f = User.query.get(id_b)
+     db.session().delete(f)
+     db.session().commit()
+
+     return redirect(url_for("users_index"))

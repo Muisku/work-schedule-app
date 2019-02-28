@@ -9,7 +9,7 @@ from application.stair.models import Stair
 def index():
 	return render_template("index.html", needs_tasks=User.find_users_with_no_tasks())
 
-@app.route("/users")
+@app.route("/users_test")
 def index2():
 	return render_template("index2.html", all_users=User.find_users())
 

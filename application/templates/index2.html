@@ -1,18 +1,21 @@
 {% extends "layout.html" %}
 
 {% block body %}
-
-    <ul>
-            {% for user in all_users %}
-            <li>
-                
-                {{user.name}}
-                {{user.stair}}
-                
-            </li>
-            {% endfor %}
-        </ul>
-    
+<table>
+<tr>
+ 
+   
+</tr>
+{% for user in users %}
+<tr>
+    <td>{{ user.name }}</td>
+  
 
 
+<form method="POST" action="{{ url_for('user_remove', id_b=user.id) }}">
+        <td><button type="submit" class="btn btn-outline-primary">Poista</button></td>
+</form>
+</tr>
+{% endfor %}
+</table>
 {% endblock %}
