@@ -4,17 +4,17 @@ Orange-schedulen avulla pystyt helposti pitämään kirjaa naapurustosi työteht
 
 ### Toimintoja
 
-..* Kirjautuminen
-..* Oman rapun merkitseminen
-..* Tehtävän luonti
-..* Tehtävän nimen muokkaus
-..* Tehtävän merkitseminen tehdyksi
-..* Tehtävän poistaminen
-..* Tehtävien listaus
-..* Listaus tehtävistä ja mihin rappuihin tehtävät kuuluu
-..* Listaus henkilöistä ja heidän tehtävistään
-..* Listaus henkilöistä ja mahdollisuus poistaa henkilö
-..* Henkilön poisto
+* Kirjautuminen
+* Oman rapun merkitseminen
+* Tehtävän luonti
+* Tehtävän nimen muokkaus
+* Tehtävän merkitseminen tehdyksi
+* Tehtävän poistaminen
+* Tehtävien listaus
+* Listaus tehtävistä ja mihin rappuihin tehtävät kuuluu
+* Listaus henkilöistä ja heidän tehtävistään
+* Listaus henkilöistä ja mahdollisuus poistaa henkilö
+* Henkilön poisto
 
 
 Tietokantakaavio hahmotelma: https://github.com/Muisku/work-schedule-app/blob/master/documentation/tietokantakaavio.png

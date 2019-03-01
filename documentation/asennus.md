@@ -1,39 +1,39 @@
 ## Asennus
 
-#### Tarvitset:
+### Tarvitset:
 
-..* python 3.5 ja pip
-..* venv
-..* PostgreSQL
-..* git
+* python 3.5 ja pip
+* venv
+* PostgreSQL
+* git
 
-##### Käskyt:
+#### Käskyt:
 
-##Pythonin asennus linux käyttöjärjestelmässä:
+### Pythonin asennus linux käyttöjärjestelmässä:
 
 apt-get update
 apt-get install python
 
-##Pip
+### Pip
 
 Pip tulee python 2.7.9 ja python 3.4 ja niitä uudempien versioiden mukana.
 
-##venv
+### venv
 
 pip isntall virtualenv
 
-##PostgreSQL
+### PostgreSQL
 
 apt-get install postgresql
 
-##git
+### git
 
 apt-get install git
 
-## Lokaalisti käyttöön
+### Lokaalisti käyttöön
 
-..*Lataa projekti Github:sta ja pura
-..*Luo virtuaaliympäristö: python -m venv venv
-..*Asenna riippuvuudet: pip install -r requirements.txt
-..*Käynnistä sovellus juuresta komennolla: python run.py
+* Lataa projekti Github:sta ja pura
+* Luo virtuaaliympäristö: python -m venv venv
+* Asenna riippuvuudet: pip install -r requirements.txt
+* Käynnistä sovellus juuresta komennolla: python run.py
 
