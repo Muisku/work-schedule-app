@@ -17,10 +17,7 @@ Orange-schedulen avulla pystyt helposti pitämään kirjaa naapurustosi työteht
 * Henkilön poisto
 
 
-Tietokantakaavio hahmotelma: https://github.com/Muisku/work-schedule-app/blob/master/documentation/tietokantakaavio.png
-
-Käyttötapauksia: https://github.com/Muisku/work-schedule-app/blob/master/documentation/kayttotapauksia.md
-
 Sovelluksen kehitystä voi seurata täältä: https://orange-schedule-app.herokuapp.com/
-Käyttäjänimi: Petteri
+
+Käyttäjänimi: Pave
 Salasana: oranssi
